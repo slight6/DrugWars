@@ -1,0 +1,5 @@
+06-19-22    Obviously this is just the start. I am hopeful to use this opportunity to practice some Javascript with live
+            updates to the DrugWars page, possibly make it a full fledged game with solid mechanics and a good enough time waster for a lot of people to play and challenge each others scores, but again, this is only for me to personally practice some silly text game stuff.
+
+
+TODO: code the entire skeleton of the main page with generic, or dummy options and information. Code the simple JS buy, sell, drop stuff with the locations, random drug prices and events. This shouldn't be difficult being text based and using simple math with random numbers. May even add the bank with interest bearing account right away as well, still being simple math. 
