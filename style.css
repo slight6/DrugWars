@@ -40,7 +40,39 @@ table, td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
-    width: ;
+    background-color: lightblue;
+    
     
 }
 
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.daily_news {
+    text-align: center;
+    width: 80%;
+    height: 20%;
+    background-color: #ff6600;
+    position: relative;
+    
+
+}
+
+.centered {
+    align-items: center;
+    vertical-align: middle;
+    
+}
+
+.location_news {
+    text-align: center;
+    width: 80%;
+    height: 20%;
+    background-color: #ffaaaa;
+
+
+}
