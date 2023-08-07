@@ -2,158 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./report.js" defer></script>
+    <script src="./app.js" defer></script>
     <link rel="stylesheet" href="./style.css">
-    <title>DrugWars 2022</title>
+    <title>Drugwars 2023</title>
 </head>
 <body>
 
     <div class="container">
 
-        <!-- Start of header section -->
-        <div class="header">
+        <div class="info_player info">
 
-            <!-- Navbar for top of screen -->
-            <nav id="main-nav" class="top_navbar navbar" role="menubar">
-                <div class="menubar">
-                <ul class="menulist">
-                    <li><a href="http://www.27pro.com/drugwars/index.html">HOME</a></li>
-                    <li><a href="http://www.27pro.com/drugwars/about.html">ABOUT</a></li>
-                    <li><a href="http://www.27pro.com/drugwars/contact.html">CONTACT</a></li>
-                    <li><a href="http://www.27pro.com/drugwars/help.html">HELP</a></li>
-                </ul>
-                </div>
+            <table class="player_table">
 
-            </nav>
-            <!-- End of navbar for the top of the screen -->
+                <tbody class="player_table_body">
+                    <tr>
+                        <td class="table_heading" colspan="7">PLAYER INFORMATION</td>
+                    </tr>
 
-        </div>
-        <!-- End of header section -->
+                    <tr class="player_labels">
+                        <td class="table_label">NAME</td>
+                        <td class="table_label">LOCATION</td>
+                        <td class="table_label">CASH ON HAND</td>
+                        <td class="table_label">CASH IN BANK</td>
+                        <td class="table_label">LOAN SHARK</td>
+                        <td class="table_label">PLAYER RATING</td>
+                        <td class="table_label">DAYS LEFT</td>
+                        <td class="table_label">EMPTY POCKETS</td>
+                    </tr>
 
-        <!-- Main section of the game screen -->
-        <div class="main_section">
+                    <tr class="table_row_info">
+                        <td id="playerName" class="player_info"></td>
+                        <td id="currentLocation" class="player_info"></td>
+                        <td id="cashOnHand" class="player_info"></td>
+                        <td id="cashInBank" class="player_info"></td>
+                        <td id="loanSharkDebt" class="player_info"></td>
+                        <td id="playerRating" class="player_info"></td>
+                        <td id="daysLeft" class="player_info"></td>
+                        <td id="emptyPockets" class="player_info"></td>
+                    </tr>
 
-            <div class="info_player info">
+                </tbody>
 
-                <table class="player_table">
-                    <tbody class="player_table_body">
-                        <tr>
-                            <td class="table_heading" colspan="5">PLAYER INFORMATION</td>
-                        </tr>
-                        <tr class="player_labels">
-                            <td class="label">NAME</td>
-                            <td class="label">CASH ON HAND</td>
-                            <td class="label">CASH IN BANK</td>
-                            <td class="label">DAYS TO GO</td>
-                            <td class="label">PLAYER RATING</td>
-                        </tr>
-                        <tr class="table_row_info">
-                            <td id="player_name" class="player_info">Dummy Name</td>
-                            <td class="player_info">$1000</td>
-                            <td class="player_info">$1200</td>
-                            <td class="player_info">84</td>
-                            <td class="player_info">84.55%</td>
-                        </tr>
-                        <tr class="player_labels">
-                            <td class="label">LOCATION</td>
-                            <td class="label">LOAN SHARK</td>
-                            <td class="label">EMPTY POCKETS</td>
-                            <td class="label">WEAPONS</td>
-                            <td class="label">AMMUNITION</td>
-                        </tr>
-                        <tr class="table_row_info">
-                            <td class="player_info">New York City</td>
-                            <td class="player_info">$18000</td>
-                            <td class="player_info">100</td>
-                            <td class="player_info">2</td>
-                            <td class="player_info">20</td>
-                        </tr>
-                    </tbody>
-
-
-                </table>
-
-            </div>
-
-            <div class="daily_news">
-                <h2 class="centered">Daily News</h2>
-                <p id="daily_news">This is the body of the daily news stream.</p>
-
-            </div>
-
-            <div class="location_news">
-                <h2 class="centered">Location News</h2>
-                <p id="location_news">This is the body of the location news stream.</p>
-
-            </div>
-            
-            
-
-            <div class="info_drugs info">
-                
-                
-                <table class="drug_table">
-                    <tbody class="drug_table_body">
-                        <tr>
-                            <td class="table_heading" colspan="2">DRUG SUPPLY/DEMAND</td>
-                        </tr>
-                        <tr>
-                            <td class="label">LUDES</td>
-                            <td id="ludes">$1000</td>
-                        </tr>
-                        <tr>
-                            <td class="label">SPEED</td>
-                            <td id="speed">$1000</td>
-                        </tr>
-                        <tr>
-                            <td class="label">WEED</td>
-                            <td id="weed">0</td>
-                        </tr>
-                        <tr>
-                            <td class="label">ACID</td>
-                            <td id="acid">0</td>
-                        </tr>
-                        <tr>
-                            <td class="label">HEROIN</td>
-                            <td id="heroin">0</td>
-                        </tr>
-                        <tr>
-                            <td class="label">COCAINE</td>
-                            <td id="cocaine">0</td>
-                        </tr>
-
-                        
-                    </tbody>
-                </table>
-
-            </div>
-
-            <div class="option_menu menu">
-
-            </div>
+            </table>
 
         </div>
-        <!-- End of the main section of the game screen -->
+        <hr />
 
-        <!-- Start of the footer section -->
-        <div class="footer">
+        <div>
+            <h2 class="daily_news">DAILY NEWS</h2>
+            <p id="dailyNews">Commies are running our country!</p>
+        </div>
 
-            <!-- Navbar for the bottom of the screen -->
-            <nav class="bottom_navbar navbar">
+        <hr />
 
-            </nav>
-            <!-- End of the lower navbar -->
+        <div class="daily_prices info">
+
+            <table class="drug_prices">
+
+                <tbody class="drug_prices_body">
+                    <tr>
+                        <td class="table_heading" colspan="6">DAILY DRUG PRICES</td>
+                    </tr>
+
+                    <tr class="drug_labels">
+                        <td class="table_label">WEED</td>
+                        <td class="table_label">LUDES</td>
+                        <td class="table_label">SPEED</td>
+                        <td class="table_label">ACID</td>
+                        <td class="table_label">HEROIN</td>
+                        <td class="table_label">COCAINE</td>
+                    </tr>
+
+                    <tr class="table_row_info">
+                        <td id="weedPrice" class="drug_info"></td>
+                        <td id="ludesPrice" class="drug_info"></td>
+                        <td id="speedPrice" class="drug_info"></td>
+                        <td id="acidPrice" class="drug_info"></td>
+                        <td id="heroinPrice" class="drug_info"></td>
+                        <td id="cocainePrice" class="drug_info"></td>
+                    </tr>
+
+                    <tr class="table_row_info">
+                        <td id="weedQuantity" class="drug_info"></td>
+                        <td id="ludesQuantity" class="drug_info"></td>
+                        <td id="speedQuantity" class="drug_info"></td>
+                        <td id="acidQuantity" class="drug_info"></td>
+                        <td id="heroinQuantity" class="drug_info"></td>
+                        <td id="cocaineQuantity" class="drug_info"></td>
+                    </tr>
+
+                    <tr class="table_row_info">
+                        <td><textarea name="transWeed" id="transWeedQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                        <td><textarea name="transLudes" id="transLudesQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                        <td><textarea name="transSpeed" id="transSpeedQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                        <td><textarea name="transAcid" id="transAcidQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                        <td><textarea name="transHeroin" id="transHeroinQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                        <td><textarea name="transCocaine" id="transCocaineQuantity" cols="15" rows="1" placeholder="ENTER AMOUNT"></textarea></td>
+                    </tr>
+
+                    <tr class="table_row_info">
+                        <td><button id="buyWeed">BUY</button><button id="sellWeed">SELL</button></td>
+                        <td><button id="buyLudes">BUY</button><button id="sellLudes">SELL</button></td>
+                        <td><button id="buySpeed">BUY</button><button id="sellSpeed">SELL</button></td>
+                        <td><button id="buyAcid">BUY</button><button id="sellAcid">SELL</button></td>
+                        <td><button id="buyHeroin">BUY</button><button id="sellHeroin">SELL</button></td>
+                        <td><button id="buyCocaine">BUY</button><button id="sellCocaine">SELL</button></td>
+                    </tr>
+
+                    <tr class="table_row_info">
+                        <td><button id="jetToNewYork">Jet to New York</button></td>
+                        <td><button id="jetToBronx">Jet to Bronx</button></td>
+                        <td><button id="jetToManhatten">Jet to Manhatten</button></td>
+                        <td><button id="jetToGhetto">Jet to Ghetto</button></td>
+                        <td><button id="jetToCentralPark">Jet to Central Park</button></td>
+                        <td><button id="jetToBrooklyn">Jet to Brooklyn</button></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
 
         </div>
-        <!-- End of the footer section -->
+
+        <hr />
+
+        <div>
+
+            <textarea name="output" id="log" cols="150" rows="10" class="output_log"></textarea>
+
+        </div>
+
+        <div>
+
+            <textarea name="temp" id="temp" cols="150" rows="10" class="temp">
+
+                ID's - playerName, currentLocation, cashOnHand, cashInBank, loanSharkDebt, playerRating, daysLeft
+                ID's - weedPrice, ludesPrice, speedPrice, acidPrice, heroinPrice, cocainePrice
+                ID's - weedQuantity, ludesQuantity, speedQuantity, acidQuantity, heroinQuantity, cocaineQuantity
+                ID's - transWeedQuantity, transLudesQuantity, transSpeedQuantity, transAcidQuantity, transHeroinQuantity, transCocaineQuantity
+                ID's - buyWeed, buyLudes, buySpeed, buyAcid, buyHeroin, buyCocaine
+                ID's - sellWeed, sellLudes, sellSpeed, sellAcid, sellHeroin, sellCocaine
+                ID's - jetToNewYork, jetToBronx, jetToManhatten, jetToGhetto, jetToCentralPark, jetToBrooklyn
+                ID's - dailyNews, log
+            </textarea>
+
+        </div>
+
 
     </div>
-
-
-
-
     
-<script src="./script.js" type="module"></script>
 </body>
 </html>
